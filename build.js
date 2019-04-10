@@ -9,8 +9,6 @@ const exec = promisify(require('child_process').exec);
 
 const distPath = path.resolve(__dirname, './dist/');
 const distJSPath = path.resolve(distPath, './format.js');
-const docsDistPath = path.resolve(__dirname, './docs/dist/');
-const docsDistJsPath = path.resolve(docsDistPath, './format.js');
 
 const tmpDir = (options = {}) => new Promise((resolve, reject) => {
   tmp.dir(options, (err, dir, cleanup) => {
@@ -58,10 +56,8 @@ const templatePath = path.resolve(__dirname, './src/template.html');
     const formatSource = formatOutput({source: output});
 
     await exec(`mkdir -p ${distPath}`);
-    await exec(`mkdir -p ${docsDistPath}`);
 
     fs.writeFileSync(distJSPath, formatSource);
-    fs.writeFileSync(docsDistJsPath, formatSource);
 
   } finally {
     cleanup();
