@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/DustinWoods/twine-vue/issues"
   },
-  "homepage": "https://github.com/DustinWoods/twine-vue#readme"
+  "homepage": "https://github.com/DustinWoods/twine-vue#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/runtime": "^7.4.3",
+    "babel-loader": "^8.0.5",
+    "tmp": "^0.1.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
 }
