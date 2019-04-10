@@ -49,7 +49,7 @@ const templatePath = path.resolve(__dirname, './src/template.html');
     const template = fs.readFileSync(templatePath).toString();
 
     const replacements = {
-      BUILD_APP_SOURCE: appBuild,
+      BUILD_APP_SOURCE: `<script type="application/javascript">${appBuild}</script>`,
       BUILD_CSS_SOURCE: '',
     };
 
